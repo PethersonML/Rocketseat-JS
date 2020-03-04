@@ -1,0 +1,209 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <!-- <div id="app">
+            <ul></ul>
+            <input type="text" name="todo" placeholder="Digite um ToDo">
+            <button id="add">Adicionar</button>
+        </div>-->
+
+        <div id="git" style="margin-top: 20px;">
+            <input type="text" name="user">
+            <button onclick="search()">Adicionar</button>
+            <ul></ul>
+        </div>
+
+        <!--
+        Criando evento diretamente pelo HTML    
+        <div id="app">
+            <button onclick="mostraAlerta()">Me pressione</button>
+        </div>-->
+
+        <!--
+        Manipulando os elementos atravez de JS
+        <div id="app">
+            <input type="text" name="nome" />
+            <button class="botao">Adicionar</button>
+            <div class="box"></div>
+        </div>-->
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="ToDos.js"></script>
+
+        <script>
+            /*
+
+            .-*-.-*-.- MANIPULATING DOM ELEMENTS WITH JAVASCRIPT -.*-.-*-.-*
+            //Manipulando eventos dos elementos da DOM
+            var inputElement = document.querySelector('input[name=nome]');
+            var btnElement = document.querySelector('button.botao');
+
+            btnElement.onclick = function(){
+                var text = inputElement.value
+                alert(text);
+            }
+
+            //Manipulando styles dos elementos
+            var boxElement = document.querySelector('.box');
+            boxElement.style.width = 100;
+            boxElement.style.height = 100;
+            boxElement.style.backgroundColor = '#f00';
+
+            //Criando elemento
+            var linkElement = document.createElement('a');
+
+            linkElement.setAttribute('href', 'http://rocketseat.com.br');
+            linkElement.setAttribute('title', 'Site da Rocketseat');
+            
+            var textElement = document.createTextNode('Acessar site da Rocketseat');
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
+
+            */
+
+            /*function mostraAlerta(){
+                alert('Botão foi clicado');
+            }*/
+
+            /*
+            
+            .-*-.-*-.- INTERVAL AND TIMEOUT -.*-.-*-.-*
+            function exibeAlgo(){
+                console.log('Hello World');
+            }
+            setTimeout(exibeAlgo, 5000);
+
+            function segundo(){
+                console.log('Segundo');
+            }
+            function minuto(){
+                console.log('Minuto');
+            }
+            function hora(){
+                console.log('Hora');
+            }
+
+            setInterval(segundo, 1000);
+            setInterval(minuto, 60000);
+            setInterval(hora, 3600000);
+
+            */
+
+            /*
+            
+            .-*-.-*-.- LOOPS -.*-.-*-.-*
+            for(var i = 219345872; i > 100; i /= 5){
+                console.log(i);
+            }
+            
+            var j = 219345872;
+            while(j > 50){
+                console.log(j);
+                j /= 5;
+            }
+            
+            */
+
+            /*
+
+            .-*-.-*-.-* TENDERNESS CONDITION -.*-.-*-.-*
+            var sexo = 'M';
+            var retorno = (sexo === 'M') ? 'Masculino' : 'Feminino';
+
+            console.log(retorno);
+            
+            */
+
+            /*
+
+            .-*-.-*-.-* CONDITIONS -.*-.-*-.-*
+            var sexo = 'F', idade = 23;
+            var masculino = sexo === 'M';
+
+            if (sexo === 'M' || idade >= 18){
+                console.log('Ok');
+            }
+
+            console.log(masculino);
+
+            */
+
+            /*
+            
+            .-*-.-*-.-* SWITCH CASE -.*-.-*-.-*
+            function retornaSexo(sexo){
+                switch(sexo){
+                    case 'M': 
+                        return 'Masculino';
+                    case 'F':
+                        return 'Feminino';
+                    default:
+                        return 'Outro';
+                }
+            }
+
+            .-*-.-*-.-* IF -.*-.-*-.-*
+            function retornaSexo(sexo){
+                if(sexo == 'M'){
+                    return 'Masculino';
+                }else if(sexo == 'F'){
+                    return 'Feminino';
+                }else{
+                    return 'Outro';
+                }
+            }
+
+            console.log(retornaSexo("A"));
+
+            */
+            
+            /*
+            
+            .-*-.-*-.-* FUNCTION IN JAVASCRIPT -.*-.-*-.-*
+
+            function soma(numero1, numero2){
+                return numero1 + numero2;
+            }
+
+            console.log(soma(1,2));
+            
+            */
+            
+            /*
+            
+            .-*-.-*-.-* VARIABLES IN JAVASCRIPT -.*-.-*-.-*
+            
+            var x = 10, y = 5;
+            
+            x += 3;
+
+            console.log(x)
+        
+            var nome = 'Petherson';
+            var idade = 20;
+            var peso = 55.3;
+            var humano = true;
+
+            var alunos = ['Alexandre', 'William', 'Victória']
+
+            var aluno = {
+                nome: 'Petherson',
+                idade: 20,
+                peso: 55.3,
+                humano: true
+            };
+
+            console.log(alunos);
+            console.log(alunos[1]);
+            console.log(aluno.peso);
+            
+            */
+        </script>
+    </body>
+</html>

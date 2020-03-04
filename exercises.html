@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Exercises</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <script>
+            /* Exercise 1
+            var addres = {
+                street: 'Rua dos pinheiros',
+                number: 1293,
+                neighborhood: 'Centro',
+                city: 'São Paulo',
+                state: 'SP'
+            };
+
+            console.log('The user lives in', addres.city, '/', addres.state, ', in the', addres.neighborhood, 'neighborhood, on the street', addres.street, 'with No.', addres.number, '.');*/
+
+            /* Exercise 2
+            var count = 0;
+            function pares(x, y){
+                for(i = x; i <= y; i++){
+                    if(i % 2 == 0){
+                        count++;
+                    }
+                }
+                return count;
+            }
+
+            console.log(pares(32, 321));*/
+
+            /* 
+            .-*-.-*-.- indexOf(); -.*-.-*-.-*
+
+            *-.- Find all occurrences of an element -.-*
+
+            var indices = [];
+            var array = ['a', 'b', 'a', 'c', 'a', 'd'];
+            var elemento = 'a';
+            var idx = array.indexOf(elemento);
+
+            while (idx != -1) {
+                indices.push(idx);
+                idx = array.indexOf(elemento, idx + 1);
+            }
+
+            console.log(indices);
+
+            *-.- Find whether an element exist or not and update the array -.-*
+
+            function atualizarColecaoVegetais (vegetais, vegetal) {
+                if(vegetais.indexOf(vegetal) === -1) {
+                    vegetais.push(vegetal);
+                    console.log('Nova coleção de vegetais é : ' + vegetais);
+                }else if(vegetais.indexOf(vegetal) > -1) {
+                    console.log(vegetal + ' já existe na coleção de vegetais.');
+                }
+            }
+
+            var vegetais = ['batata', 'tomate', 'pimenta', 'pimentao'];
+
+            atualizarColecaoVegetais(vegetais, 'espinafre');
+            atualizarColecaoVegetais(vegetais, 'espinafre');
+            
+            */
+
+            /* Exercise 3
+            function haveSkill(skills){
+                if(skills.indexOf('Javascript') > -1){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+
+            var skills = ['Javascript', 'ReactJS', 'React Native'];
+            console.log(haveSkill(skills));*/
+
+            /* Exercise 4
+            function experience(years){
+                if(years >= 0 && years <=1){
+                    return 'Iniciante';
+                }else if(years > 1 && years <= 3){
+                    return 'Intermediário';
+                }else if(years > 3 && years <= 6){
+                    return 'Avançado';
+                }else{
+                    return 'Jedi Master';
+                }
+            }
+
+            console.log(experience(7));*/
+
+            /* Exercise 5
+            var users = [
+                {
+                    name: 'Diego',
+                    skills: ['Javascript', 'ReactJS', 'Redux']
+                },
+                {
+                    name: 'Gabriel',
+                    skills: ['VueJS', 'Ruby on Rails', 'Elixir']
+                }
+            ];
+            
+            var persons = [];
+            var skills = [];
+
+            for(let user of users){
+                persons.push(user.name);
+                skills.push(user.skills.join());
+            }
+
+            // arr.join() - Transforms an array into a single string
+            console.log('O', persons[0], 'possui as habilidade:', skills[0]);
+            console.log('O', persons[1], 'possui as habilidade:', skills[1]);*/
+        </script>
+    </body>
+</html>

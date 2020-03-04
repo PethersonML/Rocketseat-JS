@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Exercises 2</title>
+        <meta charset="UTF-8">
+    </head>
+    
+    <body>
+        <!-- Exercises 1 and 2
+        <div id='app'>
+            <button id='btn'>Create Element</button>
+        </div>
+        <div id="cool"></div>-->
+
+        <!-- Exercises 3 and 4
+        <div id="app">
+            <input type="text" name='nome'>
+            <button onClick="adicionar()">Adicionar</button>
+        </div>-->
+
+        <script>
+            /* Exercises 1 and 2
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            var btnElement = document.querySelector('button#btn');
+
+            btnElement.onclick = function(){
+                var boxElement = document.createElement('div');
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.border = '2px solid #000';
+                boxElement.style.backgroundColor = '#f00';
+                boxElement.style.cssFloat = 'right';
+                boxElement.onmouseover = function(){
+                    boxElement.style.backgroundColor = getRandomColor();
+                    boxElement.style.borderColor = getRandomColor();
+                }
+
+                var divElement = document.querySelector('#cool');
+                divElement.appendChild(boxElement);
+            }*/
+
+            /* Exercises 3 and 4
+            var listElement = document.createElement('ul');
+            var boxElement = document.querySelector('#app').appendChild(listElement);
+            var inputElement = document.querySelector('input[name=nome]');
+
+            function adicionar(){
+                var li = document.createElement('li');
+                li.innerHTML = inputElement.value;
+                listElement.appendChild(li);
+                inputElement.value = '';
+            }*/
+
+        </script>
+    </body>
+</html>
