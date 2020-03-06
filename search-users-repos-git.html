@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Search User Repositories on GitHub</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <div id="git" style="margin-top: 20px;">
+            <input type="text" name="user">
+            <button onclick="search()">Pesquisar</button>
+            <ul></ul>
+        </div>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>
+            var listElement = document.querySelector('#git ul');
+            var inputElement = document.querySelector('input[name=user]');
+
+            var repos = [];
+
+            function search(){
+                var user = inputElement.value;
+                axios.get('https://api.github.com/users/'+ user +'/repos')
+                    .then(function(response){
+                        listElement.innerHTML = '';
+                        repos = response.data;
+                        for(let r of repos){
+                            var li = document.createElement('li');
+                            li.innerHTML = r.name;
+                            listElement.appendChild(li);
+                        }
+                    })
+                    .catch(function(error){
+                        alert('Náo foi possivel encontrar este usuário');
+                    });
+            }
+        </script>
+    </body>
+</html>

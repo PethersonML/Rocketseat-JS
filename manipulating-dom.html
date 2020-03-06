@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Manipulating DOM</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <!--Criando evento diretamente pelo HTML-->    
+        <div>
+            <button onclick="mostraAlerta()">Me pressione</button>
+        </div>
+
+        <!--Manipulando os elementos atravez de JS-->
+        <div id="app">
+            <input type="text" name="nome" />
+            <button class="botao">Adicionar</button>
+            <div class="box"></div>
+        </div>
+
+        <script>
+            //.-*-.-*-.- MANIPULATING DOM ELEMENTS WITH JAVASCRIPT -.*-.-*-.-*
+            //Manipulando eventos dos elementos da DOM
+            var inputElement = document.querySelector('input[name=nome]');
+            var btnElement = document.querySelector('button.botao');
+
+            btnElement.onclick = function(){
+                var text = inputElement.value
+                alert(text);
+            }
+
+            //Manipulando styles dos elementos
+            var boxElement = document.querySelector('.box');
+            boxElement.style.width = 100;
+            boxElement.style.height = 100;
+            boxElement.style.backgroundColor = '#f00';
+
+            //Criando elemento
+            var linkElement = document.createElement('a');
+
+            linkElement.setAttribute('href', 'http://rocketseat.com.br');
+            linkElement.setAttribute('title', 'Site da Rocketseat');
+            
+            var textElement = document.createTextNode('Acessar site da Rocketseat');
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
+
+            function mostraAlerta(){
+                alert('Botão foi clicado');
+            }
+        </script>
+    </body>
+</html>
